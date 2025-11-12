@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+<html <head> <link rel="shortcut icon" href="https://sun9-76.userapi.com/s/v1/if2/aY6Qy3bU6K-m56_7GExaE2ssiL5bY552Q67gNatPWXLVk2J8L1cf7kqUkbTf4BVM_dVX-kReYdKtpisN5aPFej1Y.jpg?quality=95&as=32x28,48x42,72x63,108x95,160x140,240x211,360x316,480x421,540x474,640x561,720x632,1080x948,1280x1123&from=bu&cs=1280x0" type="image/x-icon">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профессиональный строитель</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="%238B4513"/><path d="M0,50 L200,50 M0,100 L200,100 M0,150 L200,150 M50,0 L50,200 M100,0 L100,200 M150,0 L150,200" stroke="%23A0522D" stroke-width="2"/></svg>');
+            background-size: cover;
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            background: rgba(139, 69, 19, 0.9);
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid #8B4513;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .contact-info {
+            background: rgba(160, 82, 45, 0.85);
+            padding: 25px;
+            border-radius: 15px;
+            min-width: 300px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .contact-item i {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        .portfolio-section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #FFD700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.05);
+        }
+
+        .portfolio-item img,
+        .portfolio-item video {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(139, 69, 19, 0.9);
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+
+        .social-links {
+            text-align: center;
+            padding: 30px 0;
+        }.social-btn {
+            display: inline-flex;
+            align-items: center;
+            background: #4C75A3;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-btn:hover {
+            background: #3B5998;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .social-btn i {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Шапка -->
+        <header class="header">
+            <h1>Профессиональный строитель</h1>
+            <p>Строительные работы любой сложности</p>
+        </header>
+
+        <!-- Информация о строителе -->
+        <section class="profile-section">
+            <img src="https://sun9-39.userapi.com/s/v1/ig2/-9Pa6Ys7E0QUBx5POgYVokY-UbeeW3m6E4o0ILf6NANmasNshPqbtRs9YGwF0r3GLmz6byY3x8XBDf5s4XTcCbQL.jpg?quality=96&crop=61,61,491,491&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480&ava=1&u=OlJUDbjDeSc_EI5nfv_-do6dKJ4r_HMRE9wb-vvYWJY&cs=200x200" alt="Фото строителя" class="profile-image">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-user"></i>
+                    <span>Сергей Матвеев</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+7 (981) 713-38-51</span>
+                </div>
+                
+                </div>
+            </div>
+        </section>
+
+        <!-- Портфолио фото -->
+        <section class="portfolio-section">
+            <h2 class="section-title">Фотографии работ</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://sun9-53.userapi.com/s/v1/if2/zcY8lxCCG40lY92W4mA06IGx92JmdRBJIKfhzv9waLMCi-CT07wKEEBr7t6THT4XIVDVFi7eDCOaWt6ta4HfhaS4.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&cs=2560x0" alt="Проект 1">
+                    <div class="portfolio-overlay">
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://sun9-59.userapi.com/s/v1/if2/Su5fh6lNUJ_lfe9qAJtyjG84vTYFcmi2kqWLB8waAsL9G7OCZPzemrQFV9npJluAGyV7M2jCVBNeYC7YaEryjqhJ.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&cs=1280x0" alt="Проект 2">
+                    <div class="portfolio-overlay">
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://sun9-83.userapi.com/s/v1/if2/QUacg0DOBOifIQCVqZppACJ1aMTopmv8CdYuPQL_PdqSJ5ldnXPQL95U11dG7swf3pW5q95mnvfI9cYn8I1jQayv.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&cs=1280x0" alt="Проект 3">
+                    <div class="portfolio-overlay">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Портфолио видео -->
+
+        <!-- Ссылка на ВК -->
+        <section class="social-links">
+            <a href="https://vk.com/id1846523" class="social-btn" target="_blank">
+                <i class="fab fa-vk"></i>
+                Перейти в ВКонтакте
+            </a>
+        </section>
+    </div>
+
+    <script>
+        // Простой скрипт для плавной прокрутки
+        document.addEventListener('DOMContentLoaded', function() {
+            // Добавляем анимацию появления элементов
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+    </script>
+</body>
+</html>
+`
